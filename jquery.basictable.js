@@ -173,6 +173,9 @@
           else if (options === 'stop') {
             end(table, table.data('basictable'));
           }
+          else if (options === 'setup') {
+            setup(table, table.data('basictable'));
+          }
           else {
             check(table, table.data('basictable'));
           }
