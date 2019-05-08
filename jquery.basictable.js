@@ -88,8 +88,9 @@
     var unwrap = function(table) {
       $.each(table.find('td'), function() {
         var $cell = $(this);
-        var content = $cell.children('.bt-content').html();
-        $cell.html(content);
+        var $btContent = $cell.children('.bt-content');
+        $cell.append($btContent.children().detach());
+        $btContent.remove();
       });
     };
 
